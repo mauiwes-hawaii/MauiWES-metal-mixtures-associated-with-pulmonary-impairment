@@ -2,10 +2,12 @@ name: Upload to Harvard Dataverse
 on:
   push:
     branches:
-      - main # Or your default branch
+      - main
+
 jobs:
   upload:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
