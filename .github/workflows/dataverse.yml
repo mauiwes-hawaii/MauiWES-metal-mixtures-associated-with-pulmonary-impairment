@@ -1,0 +1,19 @@
+name: Upload to Harvard Dataverse
+on:
+  push:
+    branches:
+      - main # Or your default branch
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Upload to Dataverse
+        uses: marketplace/actions/dataverse-uploader-action@main
+        with:
+          server: 'https://dataverse.harvard.edu'
+          doi: 'doi.org/10.7910/DVN/JI6Y97' # Replace with your dataset DOI
+          token: ${{ secrets.DATAVERSE_TOKEN }}
+          auto_publish: 'True' # Set to 'True' to publish a new version automatically
