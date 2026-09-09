@@ -15,5 +15,5 @@ jobs:
         with:
           server: 'https://dataverse.harvard.edu'
           doi: 'doi.org/10.7910/DVN/JI6Y97' # Replace with your dataset DOI
-          token: ${{ secrets.DATAVERSE_TOKEN }}
+          token: ${{ MAUIWES }}
           auto_publish: 'True' # Set to 'True' to publish a new version automatically
