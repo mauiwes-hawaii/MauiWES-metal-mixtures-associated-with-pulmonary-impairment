@@ -10,8 +10,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Upload to Dataverse
-        uses: IQSS/dataverse-uploader@main
+      - name: Send repo to Dataverse 
+        uses: IQSS/dataverse-uploader@v1.7
         with:
           server: 'https://dataverse.harvard.edu'
           doi: 'doi.org/10.7910/DVN/JI6Y97' # Replace with your dataset DOI
