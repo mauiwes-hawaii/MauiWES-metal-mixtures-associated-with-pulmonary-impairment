@@ -18,4 +18,5 @@ jobs:
           DATAVERSE_TOKEN: ${{ secrets.DATAVERSE_TOKEN }}
           DATAVERSE_SERVER: 'https://dataverse.harvard.edu'
           DATAVERSE_DATASET_DOI: 'doi:10.7910/DVN/JI6Y97'
+          DELETE: 'false'
           PUBLISH: 'false'
