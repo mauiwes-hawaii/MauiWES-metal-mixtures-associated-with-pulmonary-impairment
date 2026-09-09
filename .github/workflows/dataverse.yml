@@ -10,10 +10,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Send repo to Dataverse 
-        uses: IQSS/dataverse-uploader@v1.7
+      - name: Upload to Dataverse
+        uses: IQSS/dataverse-uploader@main
         with:
-          server: 'https://dataverse.harvard.edu'
-          doi: 'doi.org/10.7910/DVN/JI6Y97' # Replace with your dataset DOI
-          token: ${{ secrets.DATAVERSE_TOKEN }}
-          auto_publish: 'True' # Set to 'True' to publish a new version automatically
+          DATAVERSE_TOKEN: ${{ secrets.DATAVERSE_TOKEN }}
+          DATAVERSE_SERVER: 'https://dataverse.harvard.edu'
+          DATAVERSE_DATASET_DOI: 'doi:10.7910/DVN/JI6Y97'
+          PUBLISH: 'true'
