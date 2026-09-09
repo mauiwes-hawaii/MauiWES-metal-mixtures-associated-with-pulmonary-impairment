@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/MAUIWES
+        uses: actions/checkout@v4
 
       - name: Upload to Dataverse
         uses: marketplace/actions/dataverse-uploader-action@main
